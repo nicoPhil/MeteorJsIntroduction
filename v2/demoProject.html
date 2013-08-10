@@ -1,0 +1,26 @@
+<head>
+  <title>demoProject</title>
+</head>
+
+<body>
+  {{> personList}}
+</body>
+
+<template name="personList">
+	<ul>
+	{{#each persons}}
+		<li>
+		{{> person}}
+		</li>
+	{{/each}}
+	</ul>
+</template>
+
+
+<template name="person">
+  {{firstName}}
+  {{lastName}}
+  ( {{age}} )
+</template>
+
+

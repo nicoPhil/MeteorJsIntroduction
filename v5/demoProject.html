@@ -1,0 +1,35 @@
+<head>
+  <title>demoProject</title>
+</head>
+
+<body>
+  {{> addPerson}}
+	<hr/>
+  {{> personList}}
+</body>
+
+<template name="addPerson">
+	firstName:<input type="text" class="firstname"></input><br/>
+	lastName:<input type="text" class="lastname"></input><br/>
+	age:<input type="text" class="age"></input><br/>
+	<button>Add</button>
+</template>
+
+<template name="personList">
+	<ul>
+	{{#each persons}}
+		<li>
+		{{> person}}
+		</li>
+	{{/each}}
+	</ul>
+</template>
+
+<template name="person">
+	  {{firstName}}
+	  {{lastName}}
+	  ( {{age}} )
+	  <button>X</button>
+</template>
+
+
